@@ -70,15 +70,17 @@ namespace DigitalPerson4500
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (Template != null && !string.IsNullOrEmpty(txtNombre.Text))
+            if (Template != null && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellidos.Text))
             {
                 string name = txtNombre.Text;
+                string apellidos = txtApellidos.Text;
                 byte[] templateBytes = Template.Bytes;
                 string templateString = Convert.ToBase64String(templateBytes);
 
                 var fingerprintData = new FingerprintData
                 {
                     Name = name,
+                    Apellidos = apellidos,
                     TemplateString = templateString
                 };
 
@@ -93,6 +95,16 @@ namespace DigitalPerson4500
                     using (var writer = new StreamWriter(filePath, append: true))
                     using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
                     {
+                        // Escribir encabezados si el archivo está vacío
+                        var fileExists = File.Exists(filePath);
+                        if (!fileExists)
+                        {
+                            csv.WriteField("Name");
+                            csv.WriteField("Apellidos");
+                            csv.WriteField("TemplateString");
+                            csv.NextRecord();
+                        }
+
                         csv.WriteRecord(fingerprintData);
                         csv.NextRecord();
                     }
@@ -109,7 +121,7 @@ namespace DigitalPerson4500
             }
             else
             {
-                MessageBox.Show("Por favor, asegúrese de capturar la huella digital y proporcionar un nombre.", "Error de registro");
+                MessageBox.Show("Por favor, asegúrese de capturar la huella digital y proporcionar un nombre y apellidos.", "Error de registro");
             }
         }
 
@@ -146,14 +158,15 @@ namespace DigitalPerson4500
             dgvListar.Rows.Clear();
 
             // Configurar el DataGridView
-            dgvListar.ColumnCount = 2;
+            dgvListar.ColumnCount = 3;
             dgvListar.Columns[0].Name = "Nombre";
-            dgvListar.Columns[1].Name = "Huella Digital (Base64)";
+            dgvListar.Columns[1].Name = "Apellidos";
+            dgvListar.Columns[2].Name = "Huella Digital (Base64)";
 
             // Añadir filas al DataGridView
             foreach (var item in data)
             {
-                dgvListar.Rows.Add(item.Name, item.TemplateString);
+                dgvListar.Rows.Add(item.Name, item.Apellidos, item.TemplateString);
             }
         }
 
@@ -171,11 +184,75 @@ namespace DigitalPerson4500
         {
 
         }
+
+        private void btnBorrar_Click_1(object sender, EventArgs e)
+        {
+            // Verificar si se ha seleccionado una fila en el DataGridView
+            if (dgvListar.SelectedRows.Count > 0)
+            {
+                // Obtener la fila seleccionada
+                var selectedRow = dgvListar.SelectedRows[0];
+
+                // Extraer la información del registro seleccionado
+                string nameToDelete = selectedRow.Cells[0].Value.ToString();
+                string apellidosToDelete = selectedRow.Cells[1].Value.ToString();
+
+                // Mostrar mensaje de confirmación
+                var result = MessageBox.Show("¿Estás seguro de que deseas eliminar este registro?",
+                                             "Confirmar eliminación",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+
+                // Si el usuario selecciona 'Sí'
+                if (result == DialogResult.Yes)
+                {
+                    // Cargar los datos actuales del archivo CSV
+                    var data = LoadFingerprintData();
+
+                    // Encontrar y eliminar el registro correspondiente
+                    var recordToDelete = data.FirstOrDefault(d => d.Name == nameToDelete && d.Apellidos == apellidosToDelete);
+                    if (recordToDelete != null)
+                    {
+                        data.Remove(recordToDelete);
+
+                        // Reescribir el archivo CSV sin el registro eliminado
+                        try
+                        {
+                            using (var writer = new StreamWriter(filePath, false))
+                            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                            {
+                                csv.WriteRecords(data);
+                            }
+
+                            // Actualizar el DataGridView
+                            DisplayFingerprintData();
+                            MessageBox.Show("Registro eliminado correctamente.", "Eliminación exitosa");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al eliminar el registro: {ex.Message}", "Error de eliminación");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro no encontrado.", "Error de eliminación");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un registro para eliminar.", "Error de eliminación");
+            }
+        }
+
+        
     }
+
 
     public class FingerprintData
     {
         public string Name { get; set; }
+        public string Apellidos { get; set; }
         public string TemplateString { get; set; }
     }
 }
