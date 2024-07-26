@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 376);
             this.Name = "frmVerificar";
-            this.Text = "frmVerificar";
+            this.Text = "Verificar ";
             this.ResumeLayout(false);
 
         }

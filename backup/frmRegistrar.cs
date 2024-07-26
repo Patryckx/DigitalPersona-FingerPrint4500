@@ -46,8 +46,7 @@ namespace DigitalPerson4500
 
         private void frmRegistrar_Load(object sender, EventArgs e)
         {
-            DisplayFingerprintData(); // Cargar y mostrar datos al cargar el formulario
-            dgvListar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            // Form load event handler
         }
 
         private void OnTemplate(DPFP.Template template)
@@ -98,9 +97,6 @@ namespace DigitalPerson4500
                     }
 
                     MessageBox.Show("Datos guardados correctamente en el archivo CSV.", "Registro de huellas digitales");
-
-                    // Actualizar DataGridView después de guardar
-                    DisplayFingerprintData();
                 }
                 catch (Exception ex)
                 {
@@ -113,64 +109,7 @@ namespace DigitalPerson4500
             }
         }
 
-        private List<FingerprintData> LoadFingerprintData()
-        {
-            var fingerprintDataList = new List<FingerprintData>();
-
-            try
-            {
-                // Verifica si el archivo CSV existe antes de intentar leerlo
-                if (File.Exists(filePath))
-                {
-                    using (var reader = new StreamReader(filePath))
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                    {
-                        fingerprintDataList = csv.GetRecords<FingerprintData>().ToList();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error de carga");
-            }
-
-            return fingerprintDataList;
-        }
-
-        private void DisplayFingerprintData()
-        {
-            // Cargar datos del archivo CSV
-            var data = LoadFingerprintData();
-
-            // Limpiar cualquier dato existente
-            dgvListar.Rows.Clear();
-
-            // Configurar el DataGridView
-            dgvListar.ColumnCount = 2;
-            dgvListar.Columns[0].Name = "Nombre";
-            dgvListar.Columns[1].Name = "Huella Digital (Base64)";
-
-            // Añadir filas al DataGridView
-            foreach (var item in data)
-            {
-                dgvListar.Rows.Add(item.Name, item.TemplateString);
-            }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 
     public class FingerprintData

@@ -189,5 +189,20 @@ namespace DititalPerson4500
         {
 
         }
+
+        private void PromptLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
