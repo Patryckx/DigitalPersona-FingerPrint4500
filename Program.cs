@@ -18,7 +18,7 @@ namespace DititalPerson4500
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVerificar());
+            Application.Run(new frmRegistrar());
         }
     }
 }
