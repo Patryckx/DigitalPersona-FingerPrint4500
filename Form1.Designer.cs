@@ -1,6 +1,6 @@
 ﻿namespace DititalPerson4500
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -54,14 +54,14 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 324);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnVerificar);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Main";
             this.ResumeLayout(false);
 
