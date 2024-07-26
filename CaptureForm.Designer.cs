@@ -67,6 +67,7 @@ namespace DititalPerson4500
             this.Picture.Size = new System.Drawing.Size(248, 288);
             this.Picture.TabIndex = 0;
             this.Picture.TabStop = false;
+            this.Picture.Click += new System.EventHandler(this.Picture_Click);
             // 
             // Prompt
             // 
@@ -77,6 +78,7 @@ namespace DititalPerson4500
             this.Prompt.ReadOnly = true;
             this.Prompt.Size = new System.Drawing.Size(300, 20);
             this.Prompt.TabIndex = 2;
+            this.Prompt.TextChanged += new System.EventHandler(this.Prompt_TextChanged);
             // 
             // StatusText
             // 

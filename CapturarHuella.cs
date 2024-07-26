@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DititalPerson4500
 {
-    public partial class CapturarHuella : Form
+    public partial class CapturarHuella : CaptureForm
     {
         public delegate void OnTemplateEventHandler(DPFP.Template template);
 

@@ -1,4 +1,4 @@
-﻿namespace DititalPerson4500
+﻿namespace DigitalPerson4500
 {
     partial class frmRegistrar
     {
@@ -48,6 +48,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 

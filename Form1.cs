@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalPerson4500;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,11 @@ namespace DititalPerson4500
         {
             frmVerificar verificar = new frmVerificar();
             verificar.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

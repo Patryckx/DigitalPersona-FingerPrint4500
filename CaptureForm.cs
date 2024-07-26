@@ -179,5 +179,15 @@ namespace DititalPerson4500
         {
 
         }
+
+        private void Prompt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Picture_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
