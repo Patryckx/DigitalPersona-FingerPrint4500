@@ -3,7 +3,7 @@ C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Ditital
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CaptureForm.resources
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.Main.resources
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DigitalPerson4500.frmRegistrar.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.frmVerificar.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DemoDP4500.frmVerificar.resources
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.Properties.Resources.resources
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.GenerateResource.cache
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.CoreCompileInputs.cache

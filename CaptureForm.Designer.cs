@@ -124,9 +124,9 @@ namespace DititalPerson4500
             this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(91, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 41);
+            this.label1.Size = new System.Drawing.Size(379, 41);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Registro huella Dactilar";
+            this.label1.Text = "Registro / Verificacion";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1

@@ -1,4 +1,5 @@
-﻿using DigitalPerson4500;
+﻿using DemoDP4500;
+using DigitalPerson4500;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace DititalPerson4500
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrar());
+            Application.Run(new frmVerificar());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace DititalPerson4500
+﻿namespace DemoDP4500
 {
     partial class frmVerificar
     {
@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 376);
+            this.ClientSize = new System.Drawing.Size(870, 471);
             this.Name = "frmVerificar";
             this.Text = "Verificar ";
+            //this.Load += new System.EventHandler(this.frmVerificar_Load);
             this.ResumeLayout(false);
 
         }
