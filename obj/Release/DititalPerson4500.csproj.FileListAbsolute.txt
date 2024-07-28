@@ -1,0 +1,40 @@
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DititalPerson4500 Verificacion.exe.config
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DititalPerson4500 Verificacion.exe.manifest
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DititalPerson4500 Verificacion.application
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DititalPerson4500 Verificacion.exe
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DititalPerson4500 Verificacion.pdb
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\CsvHelper.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DPFPDevNET.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DPFPEngNET.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DPFPShrNET.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\DPFPVerNET.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\Microsoft.Bcl.HashCode.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Buffers.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Memory.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Numerics.Vectors.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\CsvHelper.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\Microsoft.Bcl.HashCode.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Buffers.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Memory.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Numerics.Vectors.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.CapturarHuella.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.CaptureForm.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.Main.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DigitalPerson4500.frmRegistrar.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DemoDP4500.frmVerificar.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.Properties.Resources.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.csproj.GenerateResource.cache
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500 Verificacion.TrustInfo.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500 Verificacion.exe.manifest
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500 Verificacion.application
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500.csproj.CopyComplete
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500 Verificacion.exe
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Release\DititalPerson4500 Verificacion.pdb

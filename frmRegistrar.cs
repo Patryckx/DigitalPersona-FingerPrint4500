@@ -39,7 +39,7 @@ namespace DigitalPerson4500
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            CapturarHuella capturar = new CapturarHuella();
+            CapturarHuella_1 capturar = new CapturarHuella_1();
             capturar.OnTemplate += this.OnTemplate;
             capturar.ShowDialog();
         }

@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DititalPerson4500
 {
+
     public partial class CapturarHuella : CaptureForm
     {
         public delegate void OnTemplateEventHandler(DPFP.Template template);
@@ -25,6 +25,7 @@ namespace DititalPerson4500
             Enroller = new DPFP.Processing.Enrollment();            // Create an enrollment.
             UpdateStatus();
         }
+
         protected override void Process(DPFP.Sample Sample)
         {
             base.Process(Sample);
@@ -35,7 +36,7 @@ namespace DititalPerson4500
             // Check quality of the sample and add to enroller if it's good
             if (features != null) try
                 {
-                    MakeReport("La implementacion de la huella ha sido creada.");
+                    MakeReport("The fingerprint feature set was created1.");
                     Enroller.AddFeatures(features);     // Add feature set to template.
                 }
                 finally
@@ -47,7 +48,7 @@ namespace DititalPerson4500
                     {
                         case DPFP.Processing.Enrollment.Status.Ready:   // report success and stop capturing
                             OnTemplate(Enroller.Template);
-                            SetPrompt("Haga clic en Cerrar.");
+                            SetPrompt("Click Close, and then click Fingerprint Verification.");
                             Stop();
                             break;
 
@@ -65,7 +66,7 @@ namespace DititalPerson4500
         private void UpdateStatus()
         {
             // Show number of samples needed.
-            SetStatus(String.Format("Muestras de huella restantes: {0}", Enroller.FeaturesNeeded));
+            SetStatus(String.Format("Fingerprint samples needed: {0}", Enroller.FeaturesNeeded));
         }
 
         public CapturarHuella()

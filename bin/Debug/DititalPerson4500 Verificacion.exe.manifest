@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DititalPerson4500 Verificacion.exe" size="170968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DititalPerson4500 Verificacion.exe" size="172504">
       <assemblyIdentity name="DititalPerson4500 Verificacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TfLor0bsBtVBerhJqgsTmxCP5DL3g+9B/QI/fsiJj20=</dsig:DigestValue>
+        <dsig:DigestValue>8ejjbGr+H57KhI1ZxkgQ5i1o2U4HmLZF44r3djj0DsE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

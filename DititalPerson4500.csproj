@@ -135,6 +135,12 @@
     <Compile Include="CapturarHuella.Designer.cs">
       <DependentUpon>CapturarHuella.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapturarHuella_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarHuella_1.Designer.cs">
+      <DependentUpon>CapturarHuella_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaptureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapturarHuella.resx">
       <DependentUpon>CapturarHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturarHuella_1.resx">
+      <DependentUpon>CapturarHuella_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CaptureForm.resx">
       <DependentUpon>CaptureForm.cs</DependentUpon>
