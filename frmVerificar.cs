@@ -33,6 +33,7 @@ namespace DemoDP4500
         {
             base.Init();
             base.Text = "Verificación de Huella Digital";
+            Verificator = new DPFP.Verification.Verification();
             UpdateStatus(0);
         }
 
@@ -103,6 +104,11 @@ namespace DemoDP4500
             }
 
             return fingerprintDataList;
+        }
+
+        private void frmVerificar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
