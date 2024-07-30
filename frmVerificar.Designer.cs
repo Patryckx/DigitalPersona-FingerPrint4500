@@ -1,4 +1,4 @@
-﻿namespace DemoDP4500
+﻿namespace DititalPerson4500
 {
     partial class frmVerificar
     {

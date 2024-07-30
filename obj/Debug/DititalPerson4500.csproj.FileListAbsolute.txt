@@ -1,3 +1,13 @@
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CapturarHuella.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CapturarHuella_1.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CaptureForm.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.Main.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DigitalPerson4500.frmRegistrar.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.frmVerificar.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.Properties.Resources.resources
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.GenerateResource.cache
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.exe.config
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.exe.manifest
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.application
@@ -23,19 +33,9 @@ C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\System.
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.AssemblyReference.cache
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CapturarHuella.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CaptureForm.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.Main.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DigitalPerson4500.frmRegistrar.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DemoDP4500.frmVerificar.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.Properties.Resources.resources
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.GenerateResource.cache
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.TrustInfo.xml
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.exe.manifest
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.application
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.CopyComplete
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.exe
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.pdb
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.CapturarHuella_1.resources
