@@ -10,7 +10,7 @@ using DPFP; // Asegúrate de que esta biblioteca esté referenciada en tu proyec
 
 using DititalPerson4500;
 
-namespace DemoDP4500
+namespace DititalPerson4500
 {
     public partial class frmVerificar : CaptureForm
     {

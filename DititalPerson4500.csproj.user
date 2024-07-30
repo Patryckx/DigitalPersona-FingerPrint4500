@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
-    <PublishUrlHistory>C:\Users\User\Desktop\App registro Fingerprint\|C:\Users\User\Desktop\App Registro Huella Dactilar\|publish\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\User\Desktop\Fingerprint Register V3\|C:\Users\User\Desktop\App registro Fingerprint\|C:\Users\User\Desktop\App Registro Huella Dactilar\|publish\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory />
