@@ -14,11 +14,14 @@ namespace DititalPerson4500
     {
         private DPFP.Template Template;
         private DPFP.Verification.Verification Verificator;
+        private readonly string iniFilePath;
 
         public frmVerificar()
         {
             InitializeComponent();
             Verificator = new DPFP.Verification.Verification(); // Crear un verificador de plantillas de huella digital
+            iniFilePath = Path.Combine(@"C:\Fingerprint Registers", "verification_flag.ini");
+            this.FormClosing += new FormClosingEventHandler(frmVerificar_FormClosing); // Suscribir al evento FormClosing
         }
 
         public void Verify(DPFP.Template template)
@@ -33,6 +36,7 @@ namespace DititalPerson4500
             base.Text = "Verificación de Huella Digital";
             Verificator = new DPFP.Verification.Verification();
             UpdateStatus(0);
+            ResetVerificationFlag(); // Resetear la bandera al iniciar
         }
 
         private void UpdateStatus(int FAR)
@@ -72,6 +76,7 @@ namespace DititalPerson4500
                         if (result.Verified)
                         {
                             MakeReport("La huella digital fue VERIFICADA. " + fingerprintData.Name + " " + fingerprintData.Apellidos);
+                            SetVerificationFlag(true); // Establecer la bandera
                             return; // Si se verifica, salir del bucle
                         }
                     }
@@ -79,6 +84,7 @@ namespace DititalPerson4500
 
                 // Si no se verifica ninguna huella
                 MakeReport("La huella digital NO fue verificada.");
+                SetVerificationFlag(false); // Establecer la bandera si no se verifica
             }
         }
 
@@ -106,9 +112,47 @@ namespace DititalPerson4500
             return fingerprintDataList;
         }
 
+        private void SetVerificationFlag(bool isValidated)
+        {
+            if (!File.Exists(iniFilePath))
+            {
+                using (var writer = new StreamWriter(iniFilePath))
+                {
+                    writer.WriteLine("[Fingerprint]");
+                    writer.WriteLine($"isvalidated={(isValidated ? "true" : "none")}");
+                }
+            }
+            else
+            {
+                var iniFile = new Class1.IniFile(iniFilePath);
+                iniFile.WriteValue("Fingerprint", "isvalidated", isValidated ? "true" : "none");
+            }
+        }
+
+        private void ResetVerificationFlag()
+        {
+            if (File.Exists(iniFilePath))
+            {
+                SetVerificationFlag(false);
+            }
+        }
+
         private void frmVerificar_Load(object sender, EventArgs e)
         {
-            // Evento de carga del formulario de verificación
+            // Implementa cualquier lógica adicional si es necesario
+        }
+
+        private void frmVerificar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Restaurar la bandera a "none" cuando se cierre el formulario
+            SetVerificationFlag(false);
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            // Restaurar la bandera a "none" cuando se cierra el formulario mediante el botón de cerrar
+            SetVerificationFlag(false);
+            this.Close(); // Cerrar el formulario
         }
     }
 

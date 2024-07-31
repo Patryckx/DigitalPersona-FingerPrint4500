@@ -79,6 +79,17 @@ namespace DigitalPerson4500
 
                 if (IsValidBase64String(templateString))
                 {
+                    // Verificar si ya existe un registro con el mismo nombre y apellidos
+                    var existingData = LoadFingerprintData();
+                    bool isDuplicate = existingData.Any(data => data.Name.Equals(name, StringComparison.OrdinalIgnoreCase) &&
+                                                                data.Apellidos.Equals(apellidos, StringComparison.OrdinalIgnoreCase));
+
+                    if (isDuplicate)
+                    {
+                        MessageBox.Show("Ya existe un registro con el mismo nombre y apellidos.", "Error de registro");
+                        return;
+                    }
+
                     var fingerprintData = new FingerprintData
                     {
                         Name = name,
@@ -274,8 +285,6 @@ namespace DigitalPerson4500
                 MessageBox.Show("Por favor, seleccione un registro para eliminar.", "Error de eliminación");
             }
         }
-
-
     }
 
     public class FingerprintData

@@ -205,5 +205,10 @@ namespace DititalPerson4500
         {
 
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

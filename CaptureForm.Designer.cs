@@ -117,6 +117,7 @@ namespace DititalPerson4500
             this.CloseButton.TabIndex = 6;
             this.CloseButton.Text = "Cerrar";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // label1
             // 
