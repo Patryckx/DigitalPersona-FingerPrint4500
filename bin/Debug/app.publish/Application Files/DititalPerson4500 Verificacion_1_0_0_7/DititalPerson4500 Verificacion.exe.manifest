@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="DititalPerson4500.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="DititalPerson4500 Verificacion.exe" version="1.0.0.7" publicKeyToken="68dc6d88916104d5" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="escaneo-de-huellas-digitales.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="DititalPerson4500" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-    <commandLine file="DititalPerson4500.exe" parameters="" />
+    <assemblyIdentity name="DititalPerson4500 Verificacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DititalPerson4500 Verificacion.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DititalPerson4500.exe" size="170968">
-      <assemblyIdentity name="DititalPerson4500" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DititalPerson4500 Verificacion.exe" size="173016">
+      <assemblyIdentity name="DititalPerson4500 Verificacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zfGySUX7Rs1uUPjauHtI3sUhs9H3BgWJM8gBpTuRdLU=</dsig:DigestValue>
+        <dsig:DigestValue>PJnNCOU5J1bkhaEAsGbnn0Rq6Z7cFD+wMbzuXAW6sMQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -198,7 +198,7 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DititalPerson4500.exe.config" size="565">
+  <file name="DititalPerson4500 Verificacion.exe.config" size="565">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
@@ -233,4 +233,4 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
-</asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-S8FL3F3\User" issuerKeyHash="4e0f2ec59ec48deb72df2cf4458c03e931a4356f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Qy+oCr9deQYvqGmIj1WHjQACW+U15HbZ6Zd9oZmymVY=</DigestValue></Reference></SignedInfo><SignatureValue>arL/p8550C9xDgbe2l5r3fyI0ncxPRe4OjqyOHZuGcOjTsgNLvtmx5+ajebTfsCCER0d+XTnp02bVbvBIgQoqKQ737898RKo8VNkpwSrxVx5mtH8QhEKOteufBY0GEm0g943RF7ywxzu5UxZyNivmfYxvkjYxsTR+LGbZUqbAXw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sJi7qIQnb82vN7FVxbUkkSx60uWttpXFC3TlylldKzRUK7FD9DZGk8eJGFcHjsLc2/whyklcAQG5JTnGNQ8XfzJypUCqtmIUCiv7E64imWnkTyK6Ws4L/LcJAiFznWdlNw3egwnFlHwdCpFToB4cxYXkNdMpqX3Fk0MStWJdMC0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5699b299a17d97e9d976e435e55b02008d87558f8869a82f06795dbf0aa82f43" Description="" Url=""><as:assemblyIdentity name="DititalPerson4500 Verificacion.exe" version="1.0.0.7" publicKeyToken="68dc6d88916104d5" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-S8FL3F3\User</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>5nT3Q2siNiU5OJkRYb3wji1HI0a4W7qHWByaG6H/5c0=</DigestValue></Reference></SignedInfo><SignatureValue>lTduW7YIMtOcz7BZW7dxNWy+R8IT2HQosjaKuCe5tzVQA52Hew0wFNYFetKz+jAPLLBmLNttAdrBjziZwBWKKZAN5UywH3vaOucYGEwNGmOaDRVU4tPBepTDERbhPf1bsZ2mCWhOerWyRONeS5r24l+5f6KNWPjz5HsA4KbKP3U=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sJi7qIQnb82vN7FVxbUkkSx60uWttpXFC3TlylldKzRUK7FD9DZGk8eJGFcHjsLc2/whyklcAQG5JTnGNQ8XfzJypUCqtmIUCiv7E64imWnkTyK6Ws4L/LcJAiFznWdlNw3egwnFlHwdCpFToB4cxYXkNdMpqX3Fk0MStWJdMC0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQN6nuodJOSatPMUFZy0wMwDANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAFMAOABGAEwAMwBGADMAXABVAHMAZQByMB4XDTI0MDcyNjEwMjkyNloXDTI1MDcyNjE2MjkyNlowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBTADgARgBMADMARgAzAFwAVQBzAGUAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAsJi7qIQnb82vN7FVxbUkkSx60uWttpXFC3TlylldKzRUK7FD9DZGk8eJGFcHjsLc2/whyklcAQG5JTnGNQ8XfzJypUCqtmIUCiv7E64imWnkTyK6Ws4L/LcJAiFznWdlNw3egwnFlHwdCpFToB4cxYXkNdMpqX3Fk0MStWJdMC0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQAYZ6PJSXDsLbJ7iGBmstPPdTH95W0trojg/TuwkS/D8JmPBxF7Kz38hIUb40ed8j/VkXhINUb6PygWwJKWTau6FhpkCFhQhBhEijK7g1R60C3IkCNtvJk26S2EmMDkkaAzWLPp6BwXthkL92YVZmXoAZGCNbPLE3V/wlrWlyft5w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

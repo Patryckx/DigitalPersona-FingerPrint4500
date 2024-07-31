@@ -77,51 +77,81 @@ namespace DigitalPerson4500
                 byte[] templateBytes = Template.Bytes;
                 string templateString = Convert.ToBase64String(templateBytes);
 
-                var fingerprintData = new FingerprintData
+                if (IsValidBase64String(templateString))
                 {
-                    Name = name,
-                    Apellidos = apellidos,
-                    TemplateString = templateString
-                };
-
-                try
-                {
-                    // Crear el directorio si no existe
-                    if (!Directory.Exists(directoryPath))
+                    var fingerprintData = new FingerprintData
                     {
-                        Directory.CreateDirectory(directoryPath);
-                    }
+                        Name = name,
+                        Apellidos = apellidos,
+                        TemplateString = templateString
+                    };
 
-                    using (var writer = new StreamWriter(filePath, append: true))
-                    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                    try
                     {
-                        // Escribir encabezados si el archivo está vacío
-                        var fileExists = File.Exists(filePath);
-                        if (!fileExists)
+                        // Crear el directorio si no existe
+                        if (!Directory.Exists(directoryPath))
                         {
-                            csv.WriteField("Name");
-                            csv.WriteField("Apellidos");
-                            csv.WriteField("TemplateString");
+                            Directory.CreateDirectory(directoryPath);
+                        }
+
+                        using (var writer = new StreamWriter(filePath, append: true))
+                        using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                        {
+                            // Escribir encabezados si el archivo está vacío
+                            var fileExists = File.Exists(filePath);
+                            if (!fileExists)
+                            {
+                                csv.WriteField("Name");
+                                csv.WriteField("Apellidos");
+                                csv.WriteField("TemplateString");
+                                csv.NextRecord();
+                            }
+
+                            csv.WriteRecord(fingerprintData);
                             csv.NextRecord();
                         }
 
-                        csv.WriteRecord(fingerprintData);
-                        csv.NextRecord();
+                        MessageBox.Show("Datos guardados correctamente en el archivo CSV.", "Registro de huellas digitales");
+
+                        // Actualizar DataGridView después de guardar
+                        DisplayFingerprintData();
                     }
-
-                    MessageBox.Show("Datos guardados correctamente en el archivo CSV.", "Registro de huellas digitales");
-
-                    // Actualizar DataGridView después de guardar
-                    DisplayFingerprintData();
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar los datos: {ex.Message}", "Error de registro");
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Error al guardar los datos: {ex.Message}", "Error de registro");
+                    MessageBox.Show("La plantilla de huellas digitales no es válida.", "Error de registro");
                 }
             }
             else
             {
                 MessageBox.Show("Por favor, asegúrese de capturar la huella digital y proporcionar un nombre y apellidos.", "Error de registro");
+            }
+        }
+
+        private bool IsValidBase64String(string base64String)
+        {
+            // Eliminar espacios en blanco adicionales, si los hay
+            base64String = base64String.Trim();
+
+            // Comprobar la longitud de la cadena
+            if (base64String.Length % 4 != 0)
+            {
+                return false;
+            }
+
+            // Intentar decodificar la cadena Base64
+            try
+            {
+                Convert.FromBase64String(base64String);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
             }
         }
 
@@ -245,9 +275,8 @@ namespace DigitalPerson4500
             }
         }
 
-        
-    }
 
+    }
 
     public class FingerprintData
     {

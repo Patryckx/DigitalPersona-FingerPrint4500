@@ -8,8 +8,6 @@ using CsvHelper.Configuration;
 using System.Globalization;
 using DPFP; // Asegúrate de que esta biblioteca esté referenciada en tu proyecto
 
-using DititalPerson4500;
-
 namespace DititalPerson4500
 {
     public partial class frmVerificar : CaptureForm
@@ -61,11 +59,13 @@ namespace DititalPerson4500
 
                 foreach (var fingerprintData in fingerprintDataList)
                 {
+                    // Convertir la cadena Base64 a bytes y crear una plantilla de huella digital
                     byte[] templateBytes = Convert.FromBase64String(fingerprintData.TemplateString);
                     using (var stream = new MemoryStream(templateBytes))
                     {
                         DPFP.Template template = new DPFP.Template(stream);
 
+                        // Verificar la muestra capturada contra la plantilla cargada
                         Verificator.Verify(features, template, ref result);
                         UpdateStatus(result.FARAchieved);
 
@@ -108,7 +108,7 @@ namespace DititalPerson4500
 
         private void frmVerificar_Load(object sender, EventArgs e)
         {
-
+            // Evento de carga del formulario de verificación
         }
     }
 
@@ -116,6 +116,6 @@ namespace DititalPerson4500
     {
         public string Name { get; set; }
         public string Apellidos { get; set; }
-        public string TemplateString { get; set; }
+        public string TemplateString { get; set; } // Esta propiedad almacena la huella dactilar codificada en Base64
     }
 }
