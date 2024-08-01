@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="DititalPerson4500 Verificacion.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Verificador de Huellas.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="escaneo-de-huellas-digitales.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="DititalPerson4500 Verificacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-    <commandLine file="DititalPerson4500 Verificacion.exe" parameters="" />
+    <assemblyIdentity name="Verificador de Huellas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Verificador de Huellas.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -51,18 +51,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>rf/canyINt6J09g7nhUHuARDoN0AqGMZny8ArcgC4QY=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DititalPerson4500 Verificacion.exe" size="175576">
-      <assemblyIdentity name="DititalPerson4500 Verificacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1zli/uyEeQmgWYtqUpF1Ekr+7DA1sxrscO0ExHCU+vA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -198,15 +186,18 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DititalPerson4500 Verificacion.exe.config" size="565">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5r8dZUXxWRTgGPBRXEmE5FAo64/mfda/8bBekGEkYwA=</dsig:DigestValue>
-    </hash>
-  </file>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Verificador de Huellas.exe" size="176600">
+      <assemblyIdentity name="Verificador de Huellas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>r8hb7I+7XwxeI4Z/hm9rXq9wcwTnzJUthlvhH8oJJP8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <file name="escaneo-de-huellas-digitales.ico" size="24528">
     <hash>
       <dsig:Transforms>
@@ -214,6 +205,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>n6ugl6ndlqcEjUieGKFya8xUtiOzx9H5UPZmy9agkBs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Verificador de Huellas.exe.config" size="565">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5r8dZUXxWRTgGPBRXEmE5FAo64/mfda/8bBekGEkYwA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

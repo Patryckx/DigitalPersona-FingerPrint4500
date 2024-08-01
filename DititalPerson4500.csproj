@@ -7,13 +7,13 @@
     <ProjectGuid>{0DB2601A-50DB-41EC-8A1C-FB53AA5A62F7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DititalPerson4500</RootNamespace>
-    <AssemblyName>DititalPerson4500 Verificacion</AssemblyName>
+    <AssemblyName>Verificador de Huellas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\User\Desktop\FingerprintVerificationV8\</PublishUrl>
+    <PublishUrl>C:\Users\User\Desktop\FingerPrint Verification V11\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

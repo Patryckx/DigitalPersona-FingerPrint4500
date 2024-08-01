@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using CsvHelper;
 using CsvHelper.Configuration;
-using System.Globalization;
-using DPFP; // Asegúrate de que esta biblioteca esté referenciada en tu proyecto
+using DPFP;
+using DPFP.Capture;
 
 namespace DititalPerson4500
 {
@@ -15,13 +16,14 @@ namespace DititalPerson4500
         private DPFP.Template Template;
         private DPFP.Verification.Verification Verificator;
         private readonly string iniFilePath;
+        private readonly string folderPath = @"C:\Fingerprint Registers";
 
         public frmVerificar()
         {
             InitializeComponent();
-            Verificator = new DPFP.Verification.Verification(); // Crear un verificador de plantillas de huella digital
-            iniFilePath = Path.Combine(@"C:\Fingerprint Registers", "verification_flag.ini");
-            this.FormClosing += new FormClosingEventHandler(frmVerificar_FormClosing); // Suscribir al evento FormClosing
+            Verificator = new DPFP.Verification.Verification();
+            iniFilePath = Path.Combine(folderPath, "verification_flag.ini");
+            this.FormClosing += new FormClosingEventHandler(frmVerificar_FormClosing);
         }
 
         public void Verify(DPFP.Template template)
@@ -36,12 +38,11 @@ namespace DititalPerson4500
             base.Text = "Verificación de Huella Digital";
             Verificator = new DPFP.Verification.Verification();
             UpdateStatus(0);
-            ResetVerificationFlag(); // Resetear la bandera al iniciar
+            ResetVerificationFlag();
         }
 
         private void UpdateStatus(int FAR)
         {
-            // Mostrar el valor "False accept rate" (FAR)
             SetStatus(String.Format("False Accept Rate (FAR) = {0}", FAR));
         }
 
@@ -49,49 +50,55 @@ namespace DititalPerson4500
         {
             base.Process(Sample);
 
-            // Procesar la muestra y crear un conjunto de características para el propósito de verificación.
             DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Verification);
 
-            // Comprobar la calidad de la muestra y empezar la verificación si es buena
             if (features != null)
             {
-                // Comparar el conjunto de características con nuestras plantillas almacenadas
                 DPFP.Verification.Verification.Result result = new DPFP.Verification.Verification.Result();
 
-                // Cargar huellas digitales desde el archivo CSV
                 var fingerprintDataList = LoadFingerprintDataFromCsv();
 
                 foreach (var fingerprintData in fingerprintDataList)
                 {
-                    // Convertir la cadena Base64 a bytes y crear una plantilla de huella digital
                     byte[] templateBytes = Convert.FromBase64String(fingerprintData.TemplateString);
                     using (var stream = new MemoryStream(templateBytes))
                     {
                         DPFP.Template template = new DPFP.Template(stream);
 
-                        // Verificar la muestra capturada contra la plantilla cargada
                         Verificator.Verify(features, template, ref result);
                         UpdateStatus(result.FARAchieved);
 
                         if (result.Verified)
                         {
                             MakeReport("La huella digital fue VERIFICADA. " + fingerprintData.Name + " " + fingerprintData.Apellidos);
-                            SetVerificationFlag(true); // Establecer la bandera
-                            return; // Si se verifica, salir del bucle
+
+                            // Escritura del archivo INI antes de iniciar la espera
+                            SetVerificationFlag(true, fingerprintData.Name, fingerprintData.Apellidos);
+
+                            // Espera de 7 segundos antes de cerrar
+                            Timer timer = new Timer();
+                            timer.Interval = 7000; // 7000 ms = 7 s
+                            timer.Tick += (s, e) =>
+                            {
+                                timer.Stop();
+                                this.Close(); // Cierra la ventana después de la espera
+                            };
+                            timer.Start();
+
+                            return;
                         }
                     }
                 }
 
-                // Si no se verifica ninguna huella
                 MakeReport("La huella digital NO fue verificada.");
-                SetVerificationFlag(false); // Establecer la bandera si no se verifica
+                SetVerificationFlag(false, null, null);
             }
         }
 
         private List<FingerprintData> LoadFingerprintDataFromCsv()
         {
             var fingerprintDataList = new List<FingerprintData>();
-            var filePath = Path.Combine(@"C:\Fingerprint Registers", "fingerprint_data.csv");
+            var filePath = Path.Combine(folderPath, "fingerprint_data.csv");
 
             try
             {
@@ -112,28 +119,42 @@ namespace DititalPerson4500
             return fingerprintDataList;
         }
 
-        private void SetVerificationFlag(bool isValidated)
+        private void SetVerificationFlag(bool isValidated, string name, string apellidos)
         {
+            EnsureDirectoryExists();
+
             if (!File.Exists(iniFilePath))
             {
                 using (var writer = new StreamWriter(iniFilePath))
                 {
                     writer.WriteLine("[Fingerprint]");
-                    writer.WriteLine($"isvalidated={(isValidated ? "true" : "none")}");
                 }
             }
-            else
-            {
-                var iniFile = new Class1.IniFile(iniFilePath);
-                iniFile.WriteValue("Fingerprint", "isvalidated", isValidated ? "true" : "none");
-            }
+
+            var iniFile = new IniFile(iniFilePath);
+            iniFile.WriteValue("Fingerprint", "isvalidated", isValidated ? "true" : "none");
+            iniFile.WriteValue("Fingerprint", "nombre", isValidated ? name : "none");
+            iniFile.WriteValue("Fingerprint", "apellidos", isValidated ? apellidos : "none");
         }
 
         private void ResetVerificationFlag()
         {
+            EnsureDirectoryExists();
+
             if (File.Exists(iniFilePath))
             {
-                SetVerificationFlag(false);
+                var iniFile = new IniFile(iniFilePath);
+                iniFile.WriteValue("Fingerprint", "isvalidated", "none");
+                iniFile.WriteValue("Fingerprint", "nombre", "none");
+                iniFile.WriteValue("Fingerprint", "apellidos", "none");
+            }
+        }
+
+        private void EnsureDirectoryExists()
+        {
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
             }
         }
 
@@ -144,15 +165,13 @@ namespace DititalPerson4500
 
         private void frmVerificar_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Restaurar la bandera a "none" cuando se cierre el formulario
-            SetVerificationFlag(false);
+            SetVerificationFlag(false, null, null);
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            // Restaurar la bandera a "none" cuando se cierra el formulario mediante el botón de cerrar
-            SetVerificationFlag(false);
-            this.Close(); // Cerrar el formulario
+            SetVerificationFlag(false, null, null);
+            this.Close();
         }
     }
 
@@ -160,6 +179,25 @@ namespace DititalPerson4500
     {
         public string Name { get; set; }
         public string Apellidos { get; set; }
-        public string TemplateString { get; set; } // Esta propiedad almacena la huella dactilar codificada en Base64
+        public string TemplateString { get; set; }
+    }
+
+    public class IniFile
+    {
+        private readonly string _path;
+
+        public IniFile(string path)
+        {
+            _path = path;
+        }
+
+        public void WriteValue(string section, string key, string value)
+        {
+            // Implementación para escribir un valor en el archivo INI
+            WritePrivateProfileString(section, key, value, _path);
+        }
+
+        [System.Runtime.InteropServices.DllImport("kernel32")]
+        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
     }
 }

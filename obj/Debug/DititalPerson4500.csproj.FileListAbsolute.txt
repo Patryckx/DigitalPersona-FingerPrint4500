@@ -29,13 +29,13 @@ C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Ditital
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.GenerateResource.cache
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500.csproj.CopyComplete
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.exe.config
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.exe.manifest
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.application
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.exe
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\DititalPerson4500 Verificacion.pdb
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.TrustInfo.xml
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.exe.manifest
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.application
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.exe
-C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\DititalPerson4500 Verificacion.pdb
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\Verificador de Huellas.exe.config
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\Verificador de Huellas.exe.manifest
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\Verificador de Huellas.application
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\Verificador de Huellas.exe
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\bin\Debug\Verificador de Huellas.pdb
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Verificador de Huellas.TrustInfo.xml
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Verificador de Huellas.exe.manifest
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Verificador de Huellas.application
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Verificador de Huellas.exe
+C:\Users\User\source\repos\DititalPerson4500\DititalPerson4500\obj\Debug\Verificador de Huellas.pdb

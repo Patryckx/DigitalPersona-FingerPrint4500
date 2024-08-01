@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -79,14 +78,15 @@ namespace DigitalPerson4500
 
                 if (IsValidBase64String(templateString))
                 {
-                    // Verificar si ya existe un registro con el mismo nombre y apellidos
+                    // Verificar si ya existe un registro con el mismo nombre, apellidos o huella dactilar
                     var existingData = LoadFingerprintData();
-                    bool isDuplicate = existingData.Any(data => data.Name.Equals(name, StringComparison.OrdinalIgnoreCase) &&
-                                                                data.Apellidos.Equals(apellidos, StringComparison.OrdinalIgnoreCase));
+                    bool isDuplicate = existingData.Any(data =>
+                        (data.Name.Equals(name, StringComparison.OrdinalIgnoreCase) && data.Apellidos.Equals(apellidos, StringComparison.OrdinalIgnoreCase)) ||
+                        data.TemplateString.Equals(templateString, StringComparison.OrdinalIgnoreCase));
 
                     if (isDuplicate)
                     {
-                        MessageBox.Show("Ya existe un registro con el mismo nombre y apellidos.", "Error de registro");
+                        MessageBox.Show("Ya existe un registro con el mismo nombre, apellidos o huella dactilar.", "Error de registro");
                         return;
                     }
 
